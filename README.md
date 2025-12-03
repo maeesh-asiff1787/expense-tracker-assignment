@@ -75,7 +75,7 @@ src/
 │   └── storage.tsx     # AsyncStorage Utilities (Persistence)
 ├── components/         # Reusable UI Components
 └── nativewind-env.d.ts # TypeScript definitions for styling
-
+```
 
 🚀 How to Run
 
