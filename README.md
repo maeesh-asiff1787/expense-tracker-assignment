@@ -1,50 +1,96 @@
-# Welcome to your Expo app 👋
+💰 Expensify - Smart Expense Tracker
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Student Name: Maeesh Asif
 
-## Get started
+Student ID: S1600179
 
-1. Install dependencies
+Module: Mobile Applications Development
 
-   ```bash
-   npm install
-   ```
+A modern expense tracking application built with React Native, Expo, and NativeWind.
 
-2. Start the app
+✨ Key Features
 
-   ```bash
-   npx expo start
-   ```
+📝 Smart Logging: Add expenses with Title, Amount, Category, and Date.
 
-In the output, you'll find options to open the app in a
+📅 Backdating: Manually input past dates; list sorts automatically.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+📊 Visual Categories: Expenses are automatically tagged with icons (🍔, 🚗, 🛍️).
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+💾 Data Persistence: User data and expenses are saved permanently on the device.
 
-## Get a fresh project
+🔐 Authentication: Simulated login flow (accepts any email address).
 
-When you're ready, run:
+📸 Screenshots & Technical Breakdown
 
-```bash
-npm run reset-project
-```
+Authentication Flow
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Main Dashboard
 
-## Learn more
+<img src="docs/screenshots/login.jpg" width="250" />
 
-To learn more about developing your project with Expo, look at the following resources:
+<img src="docs/screenshots/homepage.jpg" width="250" />
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Secure Entry Point
 
-## Join the community
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This screen demonstrates the app's initial state, guarding user data behind a simulated login. It features a clean, responsive form managed via the global Context API. Once a valid email is entered, the app updates the global user state and redirects to the protected dashboard, preventing unauthorized access to financial data.
+
+Dynamic Visualization
+
+
+
+The core hub of the application. It automatically calculates total spending using array reduction logic. The "Spending by Category" section aggregates data in real-time. The list below utilizes FlatList for optimized performance, rendering transactions with specific visual icons (🍔, 🚗) based on the category selected.
+
+Smart Data Entry
+
+Profile & Persistence
+
+<img src="docs/screenshots/add-function.jpg" width="250" />
+
+<img src="docs/screenshots/signout-profile.jpg" width="250" />
+
+Backdating & Logic
+
+
+
+A comprehensive form designed for flexibility. Beyond standard title and amount fields, it features a Backdating Input (YYYY-MM-DD), allowing users to log past expenses. The app logic automatically re-sorts the main list chronologically based on this date. Category selectors update the UI state instantly before saving.
+
+Session Management
+
+
+
+This screen manages the persistent user session. It displays logged-in user details retrieved directly from AsyncStorage. Critical features include 'Sign Out' (clearing session state) and 'Reset All Data' (wiping local storage), giving users full control over their data footprint on the device.
+
+🚀 How to Run
+
+Clone the repo:
+
+git clone [https://github.com/maeesh-asiff1787/expense-tracker-assignment.git](https://github.com/maeesh-asiff1787/expense-tracker-assignment.git)
+cd expense-tracker-assignment
+
+
+
+Install dependencies:
+
+npm install
+
+
+
+Start the app:
+
+npx expo start -c
+
+
+
+Test: Scan the QR code with the Expo Go app on your phone.
+
+🛠️ Tech Stack
+
+Framework: React Native (Expo Router)
+
+Styling: NativeWind (Tailwind CSS)
+
+State: React Context API
+
+Storage: AsyncStorage
