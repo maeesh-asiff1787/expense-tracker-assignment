@@ -64,6 +64,7 @@ Displays persistent user details retrieved from AsyncStorage. Includes 'Sign Out
 
 The project follows a scalable src architecture to ensure clean code separation:
 
+```text
 src/
 ├── app/                 # Expo Router Screens (Navigation)
 │   ├── (app)/          # Protected Routes (Dashboard, Add, Profile)
